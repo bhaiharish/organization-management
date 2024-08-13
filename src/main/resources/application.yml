@@ -1,0 +1,29 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: organization-management
+  datasource:
+    url: jdbc:mysql://localhost:3306/organisationdb
+    username: root
+    password: Okay@4262
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+cloud:
+  aws:
+    region:
+      static: ap-south-1
+    credentials:
+      access-key:
+      secret-key:
